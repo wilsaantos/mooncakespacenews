@@ -1,12 +1,18 @@
-<mat-toolbar>
-  <div>
-    <mat-icon>
-      rocket_launch
-    </mat-icon>
-  </div>
-  <span>
-    <b>
+<div class="header" fxLayout="column">
+  <mat-toolbar-row style="height: 32px; background-color: transparent;" fxLayoutAlign="end center">
+    <a>teste</a>
+  </mat-toolbar-row>
+
+  <div fxLayout="column" class="header-content" fxLayoutAlign="end center">
+    <div>
+      <mat-icon class="rocket">
+        rocket_launch
+      </mat-icon>
+    </div>
+    <a>
+      <b>
         Mooncake Space News
-    </b>
-  </span>
-</mat-toolbar>
+      </b>
+    </a>
+  </div>
+</div>

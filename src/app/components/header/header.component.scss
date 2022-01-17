@@ -1,22 +1,50 @@
-mat-toolbar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 70%;
-  background-image: url('../../../assets/satelite-header.jpeg');
-  position: absolute;
+.header {
+  background-image: url('../../../assets/satelite-header.png');
+  height: 60%;
   top: 0;
+  position: relative;
 }
 
-mat-icon {
+mat-toolbar-row {
+  top: 0;
+  position: fixed;
+  background-color: transparent;
+  z-index: 3;
+}
+
+.header-content {
+  background: transparent;
+  position: absolute;
+  bottom: 0;
+  align-self: center;
+}
+
+.rocket {
   transform: scale(4);
   color: #302E53;
 }
 
-span {
+a {
   vertical-align: middle;
   text-align: center;
   margin-top: 50px;
   font-size: 2rem;
   color: #1E2022;
+}
+
+.search-button {
+  background: #302E53;
+}
+
+.search {
+  transform: scale(0.8);
+  color: white;
+}
+
+.search-input {
+  height: 100% !important;
+}
+
+mat-label {
+  font-size: 1rem;
 }

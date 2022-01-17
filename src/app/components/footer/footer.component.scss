@@ -1,6 +1,6 @@
 mat-toolbar {
-    display: flex;
     justify-content: center;
+    flex-direction: column;
     position: relative;
     bottom: 0;
     background-color: #1E2022;
@@ -11,7 +11,12 @@ mat-icon {
     color: red;
 }
 
-.footer-text {
-    color: white;
+.footer a {
     font-size: 1rem;
+    color: white;
+}
+
+.heart {
+    color: red;
+    vertical-align: middle;
 }

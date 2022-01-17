@@ -1,0 +1,17 @@
+mat-toolbar {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    background-color: #1E2022;
+}
+
+mat-icon {
+    vertical-align: middle;
+    color: red;
+}
+
+.footer-text {
+    color: white;
+    font-size: 1rem;
+}

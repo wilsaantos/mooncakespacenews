@@ -23,7 +23,7 @@ Npm v8.3.1\
 3º No diretório do projeto: npm i\
 4º No diretório do projeto: ng s\
 \
-Ou teste online: https://infallible-hodgkin-a692da.netlify.app\
+Ou teste online: https://infallible-hodgkin-a692da.netlify.app
 
 ## How to Start
 
@@ -32,9 +32,9 @@ Ou teste online: https://infallible-hodgkin-a692da.netlify.app\
 3rd - On Project Directory: npm i\
 4th - On Project Directory: ng s\
 \
-Or test it online: https://infallible-hodgkin-a692da.netlify.app\
+Or test it online: https://infallible-hodgkin-a692da.netlify.app
 \
 \
-\
+
 
 # This is a challenge by [Coodesh](https://www.coodesh.com)

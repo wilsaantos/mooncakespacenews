@@ -1,44 +1,50 @@
-mat-dialog-content {
-  display: flex;
-  margin-top: 15px;
-  background-color: #302E53;
-  width: 70%;
-}
-
 img {
-  margin: 5px;
-  object-fit: cover;
-  /*this makes the image in src fit to the size specified below*/
   width: 35%;
-  /* Here you can use wherever you want to specify the width and also the height of the <img>*/
   height: 35%;
 }
 
-mat-card-title {
-  font-size: 1rem;
-  color: #D07017;
+span {
+  color: white;
+}
+
+.title {
+  font-size: 1.5rem;
+}
+
+.date {
+  font-size: 0.8rem;
 }
 
 .summary {
-  color: #D07017;
-  height: 100%;
+  font-size: 1rem;
 }
 
-.text {
-  margin-left: 30px;
-  background-color: #302E53;
-}
-
-.minorInfo {
-  margin-bottom: 15px;
-}
-
-.newsSite {
+.goToSite {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
   color: white;
-  background-color: #D07017;
+  border-color: #D07017;
+  margin-top: 18px;
+  align-self: center;
 }
 
-a {
-  text-decoration: none;
-  color: white
+@media (max-width: 760px) {
+  img {
+    height: 70%;
+    width: 100%;
+    align-self: center;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 0.5 rem;
+  }
+
+  .summary {
+    font-size: 0.8 rem;
+  }
 }

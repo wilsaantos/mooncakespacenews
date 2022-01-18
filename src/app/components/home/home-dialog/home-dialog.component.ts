@@ -12,6 +12,8 @@ export class HomeDialogComponent implements OnInit {
 
   article: Article;
 
+  innerWidth: number;
+
   constructor(
     public dialog: MatDialog,
     private dialogRef: MatDialogRef<HomeDialogComponent>,
@@ -20,7 +22,7 @@ export class HomeDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.article = this.data;
-    console.log(this.article)
+    this.innerWidth = window.innerWidth;
   }
 
 }

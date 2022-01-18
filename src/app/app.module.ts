@@ -22,6 +22,8 @@ import { HomeDialogComponent } from './components/home/home-dialog/home-dialog.c
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatMenuModule} from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import {MatMenuModule} from '@angular/material/menu';
     CommonModule,
     MatDialogModule,
     MatDividerModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [
     ApiSfnService

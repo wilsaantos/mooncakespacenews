@@ -2,7 +2,7 @@
   background-color: #1E2022;
 }
 
-mat-card {
+.articleCard {
   display: flex;
   margin-top: 15px;
   background-color: #302E53;
@@ -41,23 +41,20 @@ mat-card-content {
   margin-bottom: 15px;
 }
 
-.newsSite {
-  color: white;
-  background-color: #D07017;
-}
-
 a {
   text-decoration: none;
   color: white
 }
 
+.newsSite {
+  border-color: #D07017;
+}
+
 .seeMore {
-  color: white;
-  background-color: #D07017;
+  border-color: #D07017;
 }
 
 .loadMore {
-  color: white;
   border-color: #D07017;
   background-color: transparent;
   margin-bottom: 30px;
@@ -65,14 +62,26 @@ a {
 
 button {
   opacity: 0.9;
+  background-color: transparent;
+  border-color: #D07017;
+  color: white;
 }
 
 button:hover {
   opacity: 1;
 }
 
-.sortFields {
+.sortFields, .sortFieldsHeader {
   background-color: #1E2022;
+}
+
+.sortFieldsHeader {
+  width: 100%;
+  height: max-content;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  transition: all ease 0.2s;
 }
 
 .sortFields button {
@@ -85,6 +94,26 @@ button:hover {
 .newestButton, .oldestButton {
   background-color: #1E2022;
   color: white;
+}
+
+.warnTitle, .warnSubtitle {
+  color: #D07017;
+}
+
+.warnTitle {
+  font-size: 1.5rem;
+}
+
+.warnSubtitle {
+  font-size: 1rem;
+}
+
+.warn {
+  justify-content: center;
+  height: max-content;
+  margin-top: 15px;
+  background-color: #302E53;
+  margin-bottom: 30px;
 }
 
 ::ng-deep .menu {
@@ -108,6 +137,14 @@ button:hover {
 
 ::ng-deep .mat-input-element::placeholder{
   color: #D07017;
+}
+
+input {
+  color: white;
+}
+
+textarea:focus, input:focus {
+  color: white;
 }
 
 mat-label {
@@ -150,7 +187,7 @@ mat-form-field {
     height: 100%;
   }
 
-  mat-card {
+  .articleCard {
     width: 90%;
     height: 250px;
   }

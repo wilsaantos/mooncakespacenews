@@ -1,23 +1,37 @@
-<div class="sortFields" fxLayout="row" fxLayoutAlign="space-evenly center">
+<div class="sortFields" fxLayout="row" fxLayoutAlign="space-evenly center" *ngIf="articles.length > 0">
 
   <div>
   <mat-form-field>
-    <mat-label>Pesquisar</mat-label>
-    <input matInput>
+    <mat-label>Search</mat-label>
+    <input matInput [(ngModel)]="searchParam">
   </mat-form-field>
-  <button mat-icon-button><mat-icon>search</mat-icon></button>
+  <button mat-icon-button (click)="search()"><mat-icon>search</mat-icon></button>
 </div>
   
-  <button mat-stroked-button class="sortDate" [matMenuTriggerFor]="menu">Filtrar</button>
+  <button mat-stroked-button class="sortDate" [matMenuTriggerFor]="menu">Sort</button>
   <mat-menu #menu="matMenu" class="menu">
-    <button mat-menu-item class="newestButton">Mais Recentes</button>
-    <button mat-menu-item class="oldestButton">Mais Antigas</button>
+    <button mat-menu-item class="newestButton" (click)="sortByDate('newest')">Newest</button>
+    <button mat-menu-item class="oldestButton" (click)="sortByDate('oldest')">Oldest</button>
   </mat-menu>
 
  </div>
  
  <div class="body" fxLayout="column" fxLayoutAlign="space-around center">
-   <mat-card *ngFor="let article of articles" fxFlex fxLayout="row" fxLayoutGap="5">
+
+  <mat-card class="warn" *ngIf="articles.length < 1" fxLayout="column" fxLayoutAlign="center center">
+    <mat-card-title class="warnTitle"><b>Sorry</b></mat-card-title>
+    <mat-card-subtitle class="warnSubtitle">No Article Found</mat-card-subtitle>
+    <mat-card-content>
+      <span class="warnContent">
+      Why Im Seeing This?<br>
+      <br>No Article could be found with this Search Param, try to search anything else<br>
+      <br>Or<br>
+      <br>Something is wrong with the application, try to contact <a href="https://www.github.com/wilsaantos" target="_blank" style="text-decoration: none; color: #d07017;"><b>Wilson Santos</b></a>
+    </span>
+  </mat-card-content>
+  </mat-card>
+
+   <mat-card class="articleCard" *ngFor="let article of articles" fxFlex fxLayout="row" fxLayoutGap="5">
      <img mat-card-image src="{{article.imageUrl}}">
      <div class="text" fxLayout="column">
        <mat-card-title><b>{{article.title}}</b></mat-card-title>
@@ -29,11 +43,11 @@
              target="_blank">{{article.newsSite}}</a></button>
        </div>
        <mat-card-content>{{article.summary}}</mat-card-content>
-       <button class="seeMore" mat-stroked-button (click)="openArticleDialog(article)">Ver Mais...</button>
+       <button class="seeMore" mat-stroked-button (click)="openArticleDialog(article)">See More...</button>
      </div>
    </mat-card>
 
-   <button class="loadMore" mat-stroked-button (click)="loadArticles(articles.length + 10)">Carregar Mais</button>
+   <button class="loadMore" mat-stroked-button (click)="loadArticles(articles.length + 10)">{{articles.length > 0 ? 'Load More Articles' : 'Reload Articles'}}</button>
 
  </div>
 

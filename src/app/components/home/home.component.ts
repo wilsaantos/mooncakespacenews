@@ -35,7 +35,7 @@ export class HomeComponent implements OnInit {
   openArticleDialog(article: Article){
     const dialogRef = this.dialog.open(HomeDialogComponent,
       {
-        width: '40%',
+        width: '70%',
         height: 'auto',
         maxHeight: '90%',
         data: article

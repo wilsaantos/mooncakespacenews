@@ -20,6 +20,8 @@ import { CdkScrollableModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
 import { HomeDialogComponent } from './components/home/home-dialog/home-dialog.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatButtonModule,
     CdkScrollableModule,
     CommonModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDividerModule,
+    MatMenuModule
   ],
   providers: [
     ApiSfnService

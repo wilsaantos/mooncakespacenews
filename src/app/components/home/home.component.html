@@ -1,13 +1,32 @@
+<div class="sortFields" fxLayout="row" fxLayoutAlign="space-evenly center">
+
+  <div>
+  <mat-form-field>
+    <mat-label>Pesquisar</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <button mat-icon-button><mat-icon>search</mat-icon></button>
+</div>
+  
+  <button mat-stroked-button class="sortDate" [matMenuTriggerFor]="menu">Filtrar</button>
+  <mat-menu #menu="matMenu" class="menu">
+    <button mat-menu-item class="newestButton">Mais Recentes</button>
+    <button mat-menu-item class="oldestButton">Mais Antigas</button>
+  </mat-menu>
+
+ </div>
+ 
  <div class="body" fxLayout="column" fxLayoutAlign="space-around center">
    <mat-card *ngFor="let article of articles" fxFlex fxLayout="row" fxLayoutGap="5">
      <img mat-card-image src="{{article.imageUrl}}">
      <div class="text" fxLayout="column">
        <mat-card-title><b>{{article.title}}</b></mat-card-title>
-       <div  class="minorInfo" fxLayout="row" fxLayoutAlign="space-between center">
+       <div class="minorInfo" fxLayout="row" fxLayoutAlign="space-between center">
          <div style="color: #d07017;">
            <b>{{article.publishedAt | date: 'dd/MM/yyyy'}}</b>
          </div>
-         <button class="newsSite" mat-stroked-button><a href="{{article.url}}" target="_blank">{{article.newsSite}}</a></button>
+         <button class="newsSite" mat-stroked-button><a href="{{article.url}}"
+             target="_blank">{{article.newsSite}}</a></button>
        </div>
        <mat-card-content>{{article.summary}}</mat-card-content>
        <button class="seeMore" mat-stroked-button (click)="openArticleDialog(article)">Ver Mais...</button>

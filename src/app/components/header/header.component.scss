@@ -1,13 +1,13 @@
 .header {
-  background-image: url('../../../assets/satelite-header.png');
-  height: 60%;
+  background-color: #302E53;
+  height: 40%;
   top: 0;
   position: relative;
+  justify-content: center;
 }
 
 mat-toolbar-row {
   top: 0;
-  position: fixed;
   background-color: transparent;
   z-index: 3;
 }
@@ -15,13 +15,13 @@ mat-toolbar-row {
 .header-content {
   background: transparent;
   position: absolute;
-  bottom: 0;
   align-self: center;
+  margin-bottom: 30px;
 }
 
 .rocket {
   transform: scale(4);
-  color: #302E53;
+  color: #D07017;
 }
 
 a {
@@ -29,7 +29,7 @@ a {
   text-align: center;
   margin-top: 50px;
   font-size: 2rem;
-  color: #1E2022;
+  color: #D07017;
 }
 
 .search-button {
@@ -47,4 +47,28 @@ a {
 
 mat-label {
   font-size: 1rem;
+}
+
+mat-divider {
+  background-color: #D07017;
+}
+
+a {
+  text-decoration: none;
+  color: #D07017;
+}
+
+@media (max-width: 760px) {
+
+  .header {
+    height: 60%;
+  }
+
+  .header-content {
+    transform: scale(0.7);
+    margin-bottom: 0;
+  }
+
+
+
 }

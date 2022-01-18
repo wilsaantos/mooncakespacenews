@@ -6,16 +6,18 @@ mat-card {
   display: flex;
   margin-top: 15px;
   background-color: #302E53;
-  width: 70%;
+  width: 55%;
   height: 200px;
   max-height: 200px;
   margin-bottom: 30px;
 }
 
-mat-card img{
+mat-card img {
   margin: 5px;
-  object-fit: cover; /*this makes the image in src fit to the size specified below*/
-  width: 35%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  object-fit: cover;
+  /*this makes the image in src fit to the size specified below*/
+  width: 35%;
+  /* Here you can use wherever you want to specify the width and also the height of the <img>*/
   height: 100%;
 }
 
@@ -46,7 +48,7 @@ mat-card-content {
 
 a {
   text-decoration: none;
-  color:white
+  color: white
 }
 
 .seeMore {
@@ -59,4 +61,102 @@ a {
   border-color: #D07017;
   background-color: transparent;
   margin-bottom: 30px;
+}
+
+button {
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.sortFields {
+  background-color: #1E2022;
+}
+
+.sortFields button {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  border-color: #D07017;
+}
+
+.newestButton, .oldestButton {
+  background-color: #1E2022;
+  color: white;
+}
+
+::ng-deep .menu {
+  background-color: #1E2022;
+}
+
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #D07017 !important;
+ }
+
+ ::ng-deep .mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #D07017 !important;
+} 
+
+::ng-deep .mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #D07017 !important;;
+}
+
+::ng-deep .mat-input-element::placeholder{
+  color: #D07017;
+}
+
+mat-label {
+  color: #D07017;
+}
+
+mat-form-field {
+  margin-top: 20px;
+}
+
+@media (max-width: 760px) {
+
+  .text {
+    font-size: 0.6rem;
+    margin-left: 0;
+  }
+
+  .newsSite {
+    transform: scale(0.6);
+  }
+
+  mat-card-title {
+    font-size: 0.8rem;
+  }
+
+  mat-card-content {
+    font-size: 0.6rem;
+  }
+
+  .minorInfo {
+    margin-bottom: 0;
+  }
+
+  mat-card img {
+    margin-right: 10px;
+    object-fit: cover;
+    /*this makes the image in src fit to the size specified below*/
+    width: 30%;
+    /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+    height: 100%;
+  }
+
+  mat-card {
+    width: 90%;
+    height: 250px;
+  }
+
+  .seeMore {
+    transform: scale(0.7);
+  }
+
 }

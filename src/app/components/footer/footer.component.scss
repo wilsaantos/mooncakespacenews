@@ -4,6 +4,7 @@ mat-toolbar {
     position: relative;
     bottom: 0;
     background-color: #1E2022;
+    height: max-content;
 }
 
 mat-icon {
@@ -11,12 +12,31 @@ mat-icon {
     color: red;
 }
 
-.footer a {
+.footer span {
     font-size: 1rem;
     color: white;
+    text-align: center;
 }
 
 .heart {
     color: red;
     vertical-align: middle;
+}
+
+a {
+    text-decoration: none;
+    color: #D07017;
+    opacity: 0.7;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+@media (max-width: 760px) {
+
+    .footer span {
+        font-size: 0.6rem;
+    }
+
 }

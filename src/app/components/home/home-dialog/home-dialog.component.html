@@ -1,1 +1,13 @@
-<p>home-dialog works!</p>
+<mat-dialog-content fxFlex fxLayout="row" fxLayoutGap="5">
+  <img mat-card-image src="{{article.imageUrl}}">
+  <div class="text" fxLayout="column">
+    <title><b>{{article.title}}</b></title>
+    <div class="minorInfo" fxLayout="row" fxLayoutAlign="start center">
+      <div style="color: #d07017;">
+        <b>{{article.publishedAt | date: 'dd/MM/yyyy'}}</b>
+      </div>
+    </div>
+    <div class="summary">{{article.summary}}</div>
+    <button class="goToWebsite" mat-stroked-button><a href="{{article.url}}" target="_blank">Ir Para o Site</a></button>
+  </div>
+</mat-dialog-content>

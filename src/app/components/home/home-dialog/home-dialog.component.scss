@@ -1,0 +1,44 @@
+mat-dialog-content {
+  display: flex;
+  margin-top: 15px;
+  background-color: #302E53;
+  width: 70%;
+}
+
+img {
+  margin: 5px;
+  object-fit: cover;
+  /*this makes the image in src fit to the size specified below*/
+  width: 35%;
+  /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 35%;
+}
+
+mat-card-title {
+  font-size: 1rem;
+  color: #D07017;
+}
+
+.summary {
+  color: #D07017;
+  height: 100%;
+}
+
+.text {
+  margin-left: 30px;
+  background-color: #302E53;
+}
+
+.minorInfo {
+  margin-bottom: 15px;
+}
+
+.newsSite {
+  color: white;
+  background-color: #D07017;
+}
+
+a {
+  text-decoration: none;
+  color: white
+}

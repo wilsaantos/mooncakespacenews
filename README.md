@@ -14,7 +14,7 @@ Language: Typescript\
 Framework: Angular v13.1.3 + Angular Material\
 API: Space Flight News\
 Node v16.13.2\
-Npm v8.3.1\
+Npm v8.3.1
 
 ## Como Inicializar
 
@@ -33,8 +33,7 @@ Ou teste online: https://infallible-hodgkin-a692da.netlify.app
 4th - On Project Directory: ng s\
 \
 Or test it online: https://infallible-hodgkin-a692da.netlify.app
-\
-\
+
 
 
 # This is a challenge by [Coodesh](https://www.coodesh.com)
